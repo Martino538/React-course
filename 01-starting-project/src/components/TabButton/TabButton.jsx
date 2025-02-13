@@ -1,7 +1,7 @@
-export default function TabButton({children, functionProp, isActive}) {
+export default function TabButton({children, isActive, ...props}) {
     return(
         <li>
-            <button className={isActive ? 'active' : undefined} onClick={functionProp} >{children}</button>
+            <button className={isActive ? 'active' : undefined} {...props}>{children}</button>
         </li>
     );
 }
